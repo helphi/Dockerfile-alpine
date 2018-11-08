@@ -15,7 +15,7 @@ RUN ssh-keygen -A &&\
     chmod 600 ~/.ssh/authorized_keys &&\
     echo 'root:root' | chpasswd &&\
     echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&\
-    echo 'StrictHostKeyChecking no/' /etc/ssh/ssh_config
+    echo 'StrictHostKeyChecking no' >> /etc/ssh/ssh_config
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D", "-e"]
