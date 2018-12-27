@@ -1,11 +1,6 @@
 FROM alpine:3.8
 
-ENV LANG=C.UTF-8
-
-RUN apk add --no-cache tzdata &&\
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
-    echo "Asia/Shanghai" > /etc/timezone &&\
-    apk del tzdata
+ENV LANG=C.UTF-8 TZ=CST-8
 
 RUN apk add --no-cache busybox-extras bash expect openssh openssh-sftp-server lftp rsync curl wget git sshpass
 
