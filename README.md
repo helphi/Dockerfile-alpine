@@ -4,6 +4,7 @@
 
 ## Tags
 
+- `3.12-util`
 - `3.10-util`
 - `3.8-util-2`
 - `3.7-util`
@@ -15,7 +16,7 @@
 run as ssh server:
 
 ```bash
-docker run -d -p 22:22 helphi/alpine:3.10-util
+docker run -d -p 22:22 helphi/alpine:3.12-util
 ssh root@127.0.0.1
 #enter password root
 ```
@@ -23,7 +24,7 @@ ssh root@127.0.0.1
 run git command:
 
 ```bash
-docker run helphi/alpine:3.10-util git clone https://github.com/helphi/Dockerfile-alpine.git
+docker run helphi/alpine:3.12-util git clone https://github.com/helphi/Dockerfile-alpine.git
 ```
 
 run as ...
